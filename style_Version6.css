@@ -1,0 +1,259 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #f6f7fb;
+  color: #222;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8vw;
+  background: #181d27;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 1.7em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+nav a {
+  color: #fff;
+  margin: 0 16px;
+  text-decoration: none;
+  font-size: 1.05em;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #e0c063;
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #222 60%, #fff0 100%);
+  color: #fff;
+  min-height: 420px;
+  padding: 32px 0 28px 0;
+}
+.hero-content {
+  max-width: 420px;
+  padding: 0 32px;
+}
+.hero h1 {
+  font-size: 2.7em;
+  margin: 0 0 0.35em 0;
+}
+.hero p {
+  font-size: 1.15em;
+  margin-bottom: 1.2em;
+  color: #e0c063;
+}
+.cta, .whatsapp-btn, .call-btn {
+  display: inline-block;
+  background: #e0c063;
+  color: #222;
+  font-weight: bold;
+  padding: 13px 28px;
+  border-radius: 32px;
+  text-decoration: none;
+  font-size: 1.08em;
+  margin-right: 10px;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 8px;
+}
+.cta:hover, .whatsapp-btn:hover, .call-btn:hover {
+  background: #c2a249;
+  color: #fff;
+}
+.contact-shortcuts {
+  margin-top: 18px;
+}
+.call-btn {
+  background: #222;
+  color: #e0c063;
+  border: 2px solid #e0c063;
+}
+.call-btn:hover {
+  background: #e0c063;
+  color: #222;
+}
+.hero-img {
+  margin-top: 24px;
+  margin-bottom: 18px;
+}
+.hero-img img {
+  width: 350px;
+  max-width: 96vw;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px #2226;
+}
+.services {
+  background: #fff;
+  padding: 44px 0 24px 0;
+  text-align: center;
+}
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 28px;
+  gap: 32px;
+}
+.service-card {
+  background: #f6f7fb;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px #2221;
+  width: 290px;
+  padding: 20px 12px 28px 12px;
+  text-align: center;
+  transition: transform 0.18s;
+}
+.service-card:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 8px 32px #e0c06377;
+}
+.service-card img {
+  width: 100%;
+  border-radius: 9px;
+  margin-bottom: 14px;
+  max-height: 170px;
+  object-fit: cover;
+  box-shadow: 0 2px 18px #2222;
+}
+.why-choose {
+  max-width: 780px;
+  margin: 38px auto 0 auto;
+  background: #181d27;
+  color: #fff;
+  padding: 32px 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 16px #181d2733;
+}
+.why-choose h2 {
+  color: #e0c063;
+}
+.why-choose ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 24px 0 0 0;
+}
+.why-choose li {
+  margin-bottom: 15px;
+  font-size: 1.14em;
+  padding-left: 24px;
+  position: relative;
+}
+.why-choose li:before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  color: #e0c063;
+  font-size: 1.1em;
+}
+.booking {
+  margin: 44px auto 0 auto;
+  background: #fff;
+  max-width: 540px;
+  padding: 32px 18px 18px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px #2221;
+  text-align: center;
+}
+.booking form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 18px;
+  flex-direction: column;
+}
+.booking input, .booking textarea, .booking button {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  font-family: inherit;
+}
+.booking textarea {
+  resize: vertical;
+  min-height: 44px;
+  max-height: 120px;
+}
+.booking button {
+  background: #e0c063;
+  color: #222;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-top: 7px;
+  transition: background 0.2s;
+}
+.booking button:hover {
+  background: #c2a249;
+  color: #fff;
+}
+.booking-shortcuts {
+  margin-top: 19px;
+}
+.booking-shortcuts span {
+  font-size: 1.09em;
+  margin-right: 8px;
+}
+.contact {
+  margin: 44px auto 0 auto;
+  max-width: 540px;
+  padding: 24px 18px 32px 18px;
+  background: #181d27;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #181d2733;
+}
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+.contact-card a {
+  color: #e0c063;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.contact-card a:hover {
+  color: #fff;
+}
+footer {
+  text-align: center;
+  padding: 28px 0;
+  background: #181d27;
+  color: #fff;
+  margin-top: 40px;
+  font-size: 1em;
+}
+@media (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 2vw;
+  }
+  .hero {
+    flex-direction: column;
+    padding: 32px 0 28px 0;
+  }
+  .hero-content { padding: 0 12px;}
+}
+@media (max-width: 700px) {
+  .services-list {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .service-card { width: 98%; }
+  .why-choose { padding: 22px 4vw;}
+  .booking, .contact { padding: 18px 4vw;}
+  .hero-img img { width: 96vw; }
+}
