@@ -257,3 +257,47 @@ footer {
   .booking, .contact { padding: 18px 4vw;}
   .hero-img img { width: 96vw; }
 }
+.booking-tabs {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 22px;
+  margin-top: 12px;
+}
+.tab-btn {
+  background: linear-gradient(90deg,#e0c063 60%,#fff6d2 100%);
+  color: #222;
+  border: none;
+  border-radius: 22px 22px 0 0;
+  font-size: 1.15em;
+  padding: 13px 32px 11px 32px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px #181d2711;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.tab-btn span {
+  font-size: 1.1em;
+  margin-right: 7px;
+}
+.tab-btn.active, .tab-btn:hover {
+  background: linear-gradient(90deg,#181d27 60%,#4b4c5e 100%);
+  color: #e0c063;
+  box-shadow: 0 2px 16px #181d2733;
+}
+.tab-content {
+  width: 100%;
+  animation: fadein 0.5s;
+}
+@keyframes fadein {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+@media (max-width: 700px) {
+  .booking-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .tab-btn { width: 96vw; font-size: 1em; }
+}
