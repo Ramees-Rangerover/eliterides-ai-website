@@ -65,22 +65,50 @@
   </section>
 
   <section id="booking" class="booking">
-    <h2>Book Your Ride Instantly</h2>
-    <form action="https://formspree.io/f/mayvlkpb" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required/>
-      <input type="email" name="email" placeholder="Your Email" required/>
-      <input type="text" name="phone" placeholder="Phone or WhatsApp" required/>
-      <input type="text" name="pickup" placeholder="Pickup Location" required/>
-      <input type="text" name="destination" placeholder="Destination" required/>
-      <input type="datetime-local" name="datetime" required/>
-      <textarea name="notes" placeholder="Special requests (optional)"></textarea>
-      <button type="submit">Request Booking</button>
-    </form>
-    <div class="booking-shortcuts">
-      <span>Prefer WhatsApp?</span>
-      <a href="https://wa.me/971524243169" target="_blank" class="whatsapp-btn">Chat Now</a>
+  <h2>Book Your Ride Instantly</h2>
+  <div class="booking-tabs">
+    <button class="tab-btn active" data-tab="standard">Standard 4 Hour Ride</button>
+    <button class="tab-btn" data-tab="elite">Elite 4 Hour Ride</button>
+    <button class="tab-btn" data-tab="day">Full Day Booking</button>
+  </div>
+  <div class="tab-content" id="tab-standard">
+    <!-- Calendly Widget for Standard 4 Hour Booking -->
+    <div class="calendly-inline-widget" 
+      data-url="https://calendly.com/eliteridesabudhabi/booking-elite-rides-abu-dhabi?email=eliteridesabudhabi@gmail.com" 
+      style="min-width:320px;height:630px;">
     </div>
-  </section>
+  </div>
+  <div class="tab-content" id="tab-elite" style="display:none;">
+    <!-- Calendly Widget for Elite 4 Hour Booking (update link if needed) -->
+    <div class="calendly-inline-widget" 
+      data-url="https://calendly.com/eliteridesabudhabi/booking-elite-rides-abu-dhabi?email=eliteridesabudhabi@gmail.com" 
+      style="min-width:320px;height:630px;">
+    </div>
+  </div>
+  <div class="tab-content" id="tab-day" style="display:none;">
+    <!-- Calendly Widget for Full Day Booking -->
+    <div class="calendly-inline-widget" 
+      data-url="https://calendly.com/eliteridesabudhabi/booking-elite-rides-abu-dhabi-1?email=eliteridesabudhabi@gmail.com" 
+      style="min-width:320px;height:630px;">
+    </div>
+  </div>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <div class="booking-shortcuts">
+    <span>Prefer WhatsApp?</span>
+    <a href="https://wa.me/971524243169" target="_blank" class="whatsapp-btn">Chat Now</a>
+  </div>
+</section>
+<script>
+  // Booking tab switcher
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelectorAll('.tab-content').forEach(tc=>tc.style.display='none');
+      document.getElementById('tab-' + this.dataset.tab).style.display = 'block';
+    });
+  });
+</script>
 
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
